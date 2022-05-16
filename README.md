@@ -6,6 +6,7 @@
    - Homepage : [http://localhost:5000/](http://localhost:5000/) 
    - GET /todos : [http://localhost:5000/todos](http://localhost:5000/todos)
    - GET /user/{userId} : [http://localhost:5000/user/{id}](http://localhost:5000/user/{id})
+   - GET /user : [http://localhost:5000/user/](http://localhost:5000/user/)
 ### Tasks to be completed
    * GET /todos     
         The API returns all the todo objects except userId field in it.                        
