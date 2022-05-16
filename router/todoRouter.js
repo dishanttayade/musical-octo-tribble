@@ -11,9 +11,9 @@ async function AllTodos (req, res) {
         ans.forEach(element => {
             delete element['userId']
         });
-        console.log(result);
+        // console.log(result);
         res.json(ans);
-        console.log(ans);//true
+        // console.log(ans);//true
         return ans;
     }catch(err) {
         return res.json({

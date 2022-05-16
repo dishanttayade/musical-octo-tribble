@@ -3,3 +3,6 @@
 
 ### How to start the application
     - npm start
+
+### Information about the application
+    * 

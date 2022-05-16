@@ -4,16 +4,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="text/javascript">
+        function Redirect(){
+            let num = document.getElementById('num').value;
+            console.log(num);
+            window.location = "http://localhost:5000/user/"+num ;
+        }
+    </script>
 </head>
 <body style="border: 5mm; margin-left: 15cm; margin-top: 2cm;">
     <div>
-        <h3>Link to get all the users</h3>
+        <h3>Link to get all the users : </h3>
         <a style="margin-left:2cm ;" href="http://localhost:5000/user/">http://localhost:5000/user/</a>
-        <h3>Link to get a particular user</h3>
-        <!-- <form action=`/user/${id}`></form>
-        <input type="number">
-        <a href="http://localhost:5000/user/"></a> -->
+        <h3>Link to get all the todos : </h3>
+        <a style="margin-left:2cm ;" href="http://localhost:5000/todos/">http://localhost:5000/todos/</a>
+        <h3>Link to get a particular user :</h3>
+        <form id="sub">
+            <input style="margin-left:2cm ;" id="num" type="number" min="1" max="10">
+            <input   type="button" value="Submit" onclick="Redirect();" >
+        </form>
+        
     </div>
     
 </body>
+<!-- <script type="text/javascript">
+    document.getElementById('sub').addEventListener("submit", submission);
+    function submission() {
+            console.log("hello");
+            // window.location.redirect("https://google.com");
+            window.location.href = "https://google.com";
+        }
+    function submit(){
+        // let num = document.getElementById('num').value;
+        // console.log(num);
+        // let sub = document.getElementById('sub');
+        // sub.setAttribute('action', `http://localhost:5000/user/`+num.value);
+        // onsubmit = function () {
+        //     // window.location.redirect(`http://localhost:5000/user/${num}`);
+        //     window.location.replace("http://stackoverflow.com");
+        //     return false;
+        // }
+        // window.location.replace('http://localhost:5000/user/'+num);
+        // return false;
+        // window.location.redirect("http://stackoverflow.com");
+        // return false;
+        
+
+    }
+</script> -->
 </html>

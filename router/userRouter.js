@@ -22,18 +22,20 @@ const AllUsers = async (req, res) =>{
         })
     }
 }
-
+// let ps = AllUsers();
+// console.log(ps)
 router.get('/', AllUsers);
 
 const UserID = async (req, res) =>{
     try{
+        const id = req.params.id;
         const result = await fetch(users_url+`${req.params.id}`);
         const user = await result.json();
    
-        delete user['address'];
-        delete user['company'];
-        delete user['username'];
-        delete user['website'];
+        // delete user['address'];
+        // delete user['company'];
+        // delete user['username'];
+        // delete user['website'];
         
         const result2 = await fetch(todos_url);
         const todolist = await result2.json();
