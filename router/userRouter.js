@@ -23,6 +23,7 @@ const AllUsers = async (req, res) =>{
     }
 }
 // let ps = AllUsers();
+// const vals = Object.keys(ps).map(key => ps[key]);
 // console.log(ps)
 router.get('/', AllUsers);
 
@@ -36,6 +37,13 @@ const UserID = async (req, res) =>{
         // delete user['company'];
         // delete user['username'];
         // delete user['website'];
+        if(Object.keys(user).length === 0){
+            res.json({
+                "status": "fail",
+                "data": "No data available for "+req.params.id
+            })
+            return;
+        }
         
         const result2 = await fetch(todos_url);
         const todolist = await result2.json();
